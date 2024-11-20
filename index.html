@@ -3,79 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscribe</title>
+    <title>Support Neuro Nuggets</title>
     <style>
-        /* Style the page to center content and set the background */
+        /* Center page with background */
         body {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #004C3F; /* PayFast's dark green */
         }
 
+        /* Styling for each subscription container */
         .container {
             text-align: center;
-            background-color: #ffffff; /* White background for the container */
-            padding: 40px;
-            border-radius: 20px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px; /* Spacing between boxes */
+            width: 300px;
         }
 
-        /* Style for the image button */
+        /* Header styling */
+        h2 {
+            font-family: 'Impact', sans-serif;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        /* Button styling */
         input[type="image"] {
             display: block;
-            margin: 20px auto;  /* Center the button */
-        }
-
-        /* Style for the thank you message */
-        #thankYouMessage {
-            font-size: 36px;
-            margin-bottom: 20px;
-            font-family: 'Impact', sans-serif; /* Font changed to Impact */
-            color: #000000; /* Text color set to black */
+            margin: 10px auto;
         }
     </style>
-
-    <script type="text/javascript">
-        function updateTotalAmount() {
-            const baseAmount = 25.00;  // Fixed base amount for one subscription
-            const quantity = 1;  // Fixed quantity
-            const total = baseAmount * quantity;
-            document.getElementById('PayFastAmount').value = total.toFixed(2);  // Update hidden amount input
-        }
-
-        window.onload = function() {
-            updateTotalAmount();  // Calculate the total when the page loads
-        };
-    </script>
 </head>
 <body>
 
+<!-- Subscription Option for R25 -->
 <div class="container">
-    <form onsubmit="return actionPayFastJavascript(this);" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+    <h2>Subscribe R25 /month</h2>
+    <form name="PayFastPayNowForm25" action="https://payment.payfast.io/eng/process" method="post">
         <input required type="hidden" name="cmd" value="_paynow">
         <input required type="hidden" name="receiver" value="25318713">
         <input type="hidden" name="return_url" value="https://neuronuggets.substack.com/">
         <input type="hidden" name="cancel_url" value="https://neuronuggets.substack.com/">
-
-        <!-- Thank You Message -->
-        <p id="thankYouMessage">Thanks!</p>
-
-        <!-- Hidden input for the dynamically updated amount -->
-        <input required id="PayFastAmount" type="hidden" name="amount" value="25.00">
-
-        <input required type="hidden" name="item_name" maxlength="255" value="Neuro Nuggets Subscription">
-        <input type="hidden" name="item_description" maxlength="255" value="Thank you so much for supporting me">
+        <input type="hidden" name="amount" value="25.00">
+        <input required type="hidden" name="item_name" value="Neuro Nuggets Subscription - R25">
         <input required type="hidden" name="subscription_type" value="1">
-        <input type="hidden" name="recurring_amount" value="25.00">
+        <input required type="hidden" name="recurring_amount" value="25">
         <input required type="hidden" name="cycles" value="0">
         <input required type="hidden" name="frequency" value="3">
+        <input type="image" src="https://my.payfast.io/images/buttons/Subscribe/Light-Large-Subscribe.png" alt="Subscribe R25" title="Subscribe R25 with Payfast">
+    </form>
+</div>
 
-        <!-- Subscription button centered with rounded container -->
-        <input type="image" src="https://my.payfast.io/images/buttons/Subscribe/Light-Large-Subscribe.png" alt="Subscribe" title="Subscribe with Payfast">
+<!-- Subscription Option for R50 -->
+<div class="container">
+    <h2>Subscribe R50 /month</h2>
+    <form name="PayFastPayNowForm50" action="https://payment.payfast.io/eng/process" method="post">
+        <input required type="hidden" name="cmd" value="_paynow">
+        <input required type="hidden" name="receiver" value="25318713">
+        <input type="hidden" name="return_url" value="https://neuronuggets.substack.com/">
+        <input type="hidden" name="cancel_url" value="https://neuronuggets.substack.com/">
+        <input type="hidden" name="amount" value="50.00">
+        <input required type="hidden" name="item_name" value="Neuro Nuggets Subscription - R50">
+        <input required type="hidden" name="subscription_type" value="1">
+        <input required type="hidden" name="recurring_amount" value="50">
+        <input required type="hidden" name="cycles" value="0">
+        <input required type="hidden" name="frequency" value="3">
+        <input type="image" src="https://my.payfast.io/images/buttons/Subscribe/Light-Large-Subscribe.png" alt="Subscribe R50" title="Subscribe R50 with Payfast">
+    </form>
+</div>
+
+<!-- Subscription Option for R100 -->
+<div class="container">
+    <h2>Subscribe R100 /month</h2>
+    <form name="PayFastPayNowForm100" action="https://payment.payfast.io/eng/process" method="post">
+        <input required type="hidden" name="cmd" value="_paynow">
+        <input required type="hidden" name="receiver" value="25318713">
+        <input type="hidden" name="return_url" value="https://neuronuggets.substack.com/">
+        <input type="hidden" name="cancel_url" value="https://neuronuggets.substack.com/">
+        <input type="hidden" name="amount" value="100.00">
+        <input required type="hidden" name="item_name" value="Neuro Nuggets Subscription - R100">
+        <input required type="hidden" name="subscription_type" value="1">
+        <input required type="hidden" name="recurring_amount" value="100">
+        <input required type="hidden" name="cycles" value="0">
+        <input required type="hidden" name="frequency" value="3">
+        <input type="image" src="https://my.payfast.io/images/buttons/Subscribe/Light-Large-Subscribe.png" alt="Subscribe R100" title="Subscribe R100 with Payfast">
     </form>
 </div>
 
